@@ -1,0 +1,263 @@
+﻿@model Open_Chequelist_Template.Models.pigModel
+
+@{
+    ViewBag.Title = "AddPigs";
+}
+<div class="app-title">
+    <h2>Add Pigs</h2>
+</div>
+<h3 class="text-danger" style="text-align:center">@ViewBag.Message</h3>
+
+<br />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tile">
+                <h3 class="tile-title">Add a Pig</h3>
+                <div class="tile-body">
+                    <p class="text-danger"></p>
+                    <div class="form-horizontal">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group" style="display:none">
+                            @Html.LabelFor(model => model.pigNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-3">
+                                @Html.EditorFor(model => model.pigNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.pigNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.tagNumber, htmlAttributes: new { @class = "control-label col-md-6" })
+                                    <div class="col-md-12">
+                                        @Html.EditorFor(model => model.tagNumber, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.tagNumber, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.pigColor, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-12">
+                                        @Html.EditorFor(model => model.pigColor, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.pigColor, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.pigSex, htmlAttributes: new { @class = "control-label col-md-3" })
+                                    <div class="col-md-5">
+                                        @Html.DropDownList("pigSex", null, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.pigSex, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label col-md-8" })
+                                    <div class="col-md-12">
+                                        @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.dateOfAcquisition, htmlAttributes: new { @class = "control-label col-md-12" })
+                                    <div class="col-md-12">
+                                        @Html.EditorFor(model => model.dateOfAcquisition, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.dateOfAcquisition, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.approximateAgeInYears, htmlAttributes: new { @class = "control-label col-md-12" })
+                                    <div class="col-md-12">
+                                        @Html.EditorFor(model => model.approximateAgeInYears, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.approximateAgeInYears, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.approximateAgeInMonths, htmlAttributes: new { @class = "control-label col-md-12" })
+                                    <div class="col-md-12">
+                                        @Html.EditorFor(model => model.approximateAgeInMonths, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.approximateAgeInMonths, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-12" })
+                                    <div class="col-md-12">
+                                        @Html.DropDownList("status", null, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.source, htmlAttributes: new { @class = "control-label col-md-6" })
+                                    <div class="col-md-2">
+                                        @Html.DropDownList("source", null, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.source, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group" id="motherDiv">
+                                    @Html.LabelFor(model => model.motherID, htmlAttributes: new { @class = "control-label col-md-10" })
+                                    <div class="col-md-10">
+                                        @Html.DropDownList("motherID", null, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.motherID, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group" id="fatherDiv">
+                                    @Html.LabelFor(model => model.fatherID, htmlAttributes: new { @class = "control-label col-md-10" })
+                                    <div class="col-md-10">
+                                        @Html.DropDownList("fatherID", null, new { htmlAttributes = new { @class = "form -control" } })
+                                        @Html.ValidationMessageFor(model => model.fatherID, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group" id="buyingPriceDiv" style="display:none">
+                                    @Html.LabelFor(model => model.buyingPrice, htmlAttributes: new { @class = "control-label col-md-6" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.buyingPrice, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.buyingPrice, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group" style="display:none" id="supplierDiv">
+                                    @Html.LabelFor(model => model.supplierID, htmlAttributes: new { @class = "control-label col-md-6" })
+                                    <div class="col-md-10">
+                                        @Html.DropDownList("supplierID", null, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.supplierID, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group" style="display:none" id="supplierNameDiv">
+                                    @Html.LabelFor(model => model.supplierName, htmlAttributes: new { @class = "control-label col-md-6" })
+                                    <div class="col-md-12">
+                                        @Html.EditorFor(model => model.supplierName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.supplierName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group" style="display:none" id="supplierPhoneNumberDiv">
+                                    @Html.LabelFor(model => model.supplierPhoneNumber, htmlAttributes: new { @class = "control-label col-md-12" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.supplierPhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.supplierPhoneNumber, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group" style="display:none" id="supplierEmailDiv">
+                                    @Html.LabelFor(model => model.supplierEmail, htmlAttributes: new { @class = "control-label col-md-6" })
+                                    <div class="col-md-12">
+                                        @Html.EditorFor(model => model.supplierEmail, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.supplierEmail, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Add Pig" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                    }
+                    @foreach (var a in ViewBag.supplierID)
+                    {
+                        if (a.Text == "Add Supplier")
+                        {
+                            <p id="suppliervalue" style="display:none">@a.Value</p>
+                        }
+                    }
+                    @foreach (var a in ViewBag.source)
+                    {
+                        if (a.Text == "Born on farm")
+                        {
+                            <p id="pigBornOnFarm" style="display:none">@a.Value</p>
+                        }
+                        else if (a.Text == "Purchased")
+                        {
+                            <p id="pigPurchased" style="display:none">@a.Value</p>
+                        }
+                        else if (a.Text == "Sponsored")
+                        {
+                            <p id="Sponsored" style="display:none">@a.Value</p>
+                        }
+                    }
+                    <div>
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+                    <script src="~/Scripts/js/jquery-3.3.1.min.js"></script>
+
+
+                    <script>
+                        $(document).ready(function () {
+                            $("#supplierID").change(function () {
+                                if ($("#suppliervalue").text() == $("#supplierID").val()) {
+                                    $("#supplierNameDiv").show();
+                                    $("#supplierPhoneNumberDiv").show();
+                                    $("#supplierEmailDiv").show();
+                                }
+                                else {
+                                    $("#supplierNameDiv").hide();
+                                    $("#supplierPhoneNumberDiv").hide();
+                                    $("#supplierEmailDiv").hide();
+                                }
+                            });
+
+                            $("#source").change(function () {
+                                if ($("#source").val() == $("#pigBornOnFarm").text()) {
+                                    $("#motherDiv").show();
+                                    $("#fatherDiv").show();
+                                    $("#supplierDiv").hide();
+                                    $("#supplierNameDiv").hide();
+                                    $("#supplierPhoneNumberDiv").hide();
+                                    $("#buyingPriceDiv").hide();
+                                    $("#supplierEmailDiv").hide();
+                                }
+                                else if ($("#source").val() == $("#pigPurchased").text()) {
+                                    $("#motherDiv").show();
+                                    $("#fatherDiv").show();
+                                    $("#supplierDiv").show();
+                                    $("#buyingPriceDiv").show();
+                                }
+                            });
+
+                        });
+
+                    </script>

@@ -1,0 +1,61 @@
+﻿    <!-- Sidebar menu-->
+<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+<aside class="app-sidebar">
+    <div class="app-sidebar__user">
+        <img class="app-sidebar__user-avatar" src="~/image/kondwani.jpg" alt="User Image" width="70px" height="70px">
+        <div>
+            <p class="app-sidebar__user-name">John Doe</p>
+            <p class="app-sidebar__user-designation">Frontend Developer</p>
+        </div>
+    </div>
+    <ul class="app-menu">
+        <li><a class="app-menu__item active" href="index.html"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
+        <li class="treeview">
+            <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">Pig Management</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a class="treeview-item" href="@Url.Action("AllPigs","Common")"><i class="icon fa fa-circle-o"></i> All Pigs</a></li>
+                <li><a class="treeview-item" href="@Url.Action("SickPigs","Common")"><i class="icon fa fa-circle-o"></i> Sick Pigs</a></li>
+                <li><a class="treeview-item" href="@Url.Action("DeadPigs","Common")"><i class="icon fa fa-circle-o"></i> Dead Pigs</a></li>
+                <li><a class="treeview-item" href="@Url.Action("Vaccination","Common")"><i class="icon fa fa-circle-o"></i> Vaccination</a></li>
+                <li><a class="treeview-item" href="@Url.Action("AddPigs","Common")"><i class="icon fa fa-circle-o"></i> Add Pigs</a></li>
+                <li><a class="treeview-item" href="@Url.Action("FamilyTree","Common")"><i class="icon fa fa-circle-o"></i> Family Tree</a></li>
+                <li><a class="treeview-item" href="@Url.Action("StockingTaking","Common")"><i class="icon fa fa-circle-o"></i> Stock taking</a></li>
+                <li><a class="treeview-item" href="@Url.Action("Suppliers","Common")"><i class="icon fa fa-circle-o"></i> Suppliers</a></li>
+                <li><a class="treeview-item" href="@Url.Action("PigSummary","Common")"><i class="icon fa fa-circle-o"></i> Summary</a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Investment Management</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a class="treeview-item" href="@Url.Action("Expenses","Common")"><i class="icon fa fa-circle-o"></i> Expenses</a></li>
+                <li><a class="treeview-item" href="@Url.Action("AddExpense","Common")"><i class="icon fa fa-circle-o"></i> Add a new expense</a></li>
+                <li><a class="treeview-item" href="@Url.Action("ExpenseSummary","Common")"><i class="icon fa fa-circle-o"></i> Summary</a></li>
+               </ul>
+        </li>
+        <li class="treeview">
+            <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Sales Management</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a class="treeview-item" href="@Url.Action("AllSales","Common")"><i class="icon fa fa-circle-o"></i> All Sales</a></li>
+                <li><a class="treeview-item" href="@Url.Action("AddASale","Common")"><i class="icon fa fa-circle-o"></i> Add a sale</a></li>
+                <li><a class="treeview-item" href="@Url.Action("SalesSummary","Common")"><i class="icon fa fa-circle-o"></i> Summary</a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Customer Management</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a class="treeview-item" href="@Url.Action("AllCustomers","Common")"><i class="icon fa fa-circle-o"></i> All Customers</a></li>
+                <li><a class="treeview-item" href="@Url.Action("AddACustomer","Common")"><i class="icon fa fa-circle-o"></i> Add a customer</a></li>
+                <li><a class="treeview-item" href="@Url.Action("SalesSummary","Common")"><i class="icon fa fa-circle-o"></i> Summary</a></li>
+            </ul>
+        </li>
+        <li class="treeview">
+            <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-user-circle"></i><span class="app-menu__label">User Management</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <ul class="treeview-menu">
+                <li><a class="treeview-item" href="@Url.Action("AllUsers","Common")"><i class="icon fa fa-circle-o"></i>All Users</a></li>
+                <li><a class="treeview-item" href="@Url.Action("AddAUser","Common")"><i class="icon fa fa-circle-o"></i> Add User</a></li>
+                <li><a class="treeview-item" href="@Url.Action("UserProfile","Common")"><i class="icon fa fa-circle-o"></i> My Profile</a></li>
+                <li><a class="treeview-item" href="@Url.Action("UserSummary","Common")"><i class="icon fa fa-circle-o"></i> Summary</a></li>
+            </ul>
+        </li>
+    </ul>
+</aside>

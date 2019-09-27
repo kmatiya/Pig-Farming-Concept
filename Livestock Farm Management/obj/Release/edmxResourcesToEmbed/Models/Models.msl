@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="myfarmModelStoreContainer" CdmEntityContainer="myfarmEntities">
+    <EntitySetMapping Name="fieldStates">
+      <EntityTypeMapping TypeName="myfarmModel.fieldState">
+        <MappingFragment StoreEntitySet="fieldStates">
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="fieldStatusID" ColumnName="fieldStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inputs">
+      <EntityTypeMapping TypeName="myfarmModel.input">
+        <MappingFragment StoreEntitySet="inputs">
+          <ScalarProperty Name="pigID" ColumnName="pigID" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="numberOfProducts" ColumnName="numberOfProducts" />
+          <ScalarProperty Name="costPerProduct" ColumnName="costPerProduct" />
+          <ScalarProperty Name="product" ColumnName="product" />
+          <ScalarProperty Name="inputID" ColumnName="inputID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="outSourcedPigs">
+      <EntityTypeMapping TypeName="myfarmModel.outSourcedPig">
+        <MappingFragment StoreEntitySet="outSourcedPig">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+          <ScalarProperty Name="pigNumber" ColumnName="pigNumber" />
+          <ScalarProperty Name="outSourcedPigID" ColumnName="outSourcedPigID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pigRelationships">
+      <EntityTypeMapping TypeName="myfarmModel.pigRelationship">
+        <MappingFragment StoreEntitySet="pigRelationships">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="siblings" ColumnName="siblings" />
+          <ScalarProperty Name="malePig" ColumnName="malePig" />
+          <ScalarProperty Name="femalePig" ColumnName="femalePig" />
+          <ScalarProperty Name="pigRelationshipID" ColumnName="pigRelationshipID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pigs">
+      <EntityTypeMapping TypeName="myfarmModel.pig">
+        <MappingFragment StoreEntitySet="pigs">
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="approximateAgeInMonths" ColumnName="approximateAgeInMonths" />
+          <ScalarProperty Name="approximateAgeInYears" ColumnName="approximateAgeInYears" />
+          <ScalarProperty Name="dateOfAcquisition" ColumnName="dateOfAcquisition" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="pigColor" ColumnName="pigColor" />
+          <ScalarProperty Name="pigSex" ColumnName="pigSex" />
+          <ScalarProperty Name="tagNumber" ColumnName="tagNumber" />
+          <ScalarProperty Name="pigNumber" ColumnName="pigNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pigSources">
+      <EntityTypeMapping TypeName="myfarmModel.pigSource">
+        <MappingFragment StoreEntitySet="pigSources">
+          <ScalarProperty Name="sourceName" ColumnName="sourceName" />
+          <ScalarProperty Name="sourceID" ColumnName="sourceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pigStates">
+      <EntityTypeMapping TypeName="myfarmModel.pigState">
+        <MappingFragment StoreEntitySet="pigStates">
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="pigStateID" ColumnName="pigStateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="productTypes">
+      <EntityTypeMapping TypeName="myfarmModel.productType">
+        <MappingFragment StoreEntitySet="productTypes">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="productTypeID" ColumnName="productTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sales">
+      <EntityTypeMapping TypeName="myfarmModel.sale">
+        <MappingFragment StoreEntitySet="sales">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="salesDate" ColumnName="salesDate" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="pigNumber" ColumnName="pigNumber" />
+          <ScalarProperty Name="salesID" ColumnName="salesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sexes">
+      <EntityTypeMapping TypeName="myfarmModel.sex">
+        <MappingFragment StoreEntitySet="sexes">
+          <ScalarProperty Name="sexName" ColumnName="sexName" />
+          <ScalarProperty Name="sexID" ColumnName="sexID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="suppliers">
+      <EntityTypeMapping TypeName="myfarmModel.supplier">
+        <MappingFragment StoreEntitySet="suppliers">
+          <ScalarProperty Name="supplierState" ColumnName="supplierState" />
+          <ScalarProperty Name="supplierEmail" ColumnName="supplierEmail" />
+          <ScalarProperty Name="supplierPhoneNumber" ColumnName="supplierPhoneNumber" />
+          <ScalarProperty Name="supplierName" ColumnName="supplierName" />
+          <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="systemRoles">
+      <EntityTypeMapping TypeName="myfarmModel.systemRole">
+        <MappingFragment StoreEntitySet="systemRoles">
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="systemRoleID" ColumnName="systemRoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="myfarmModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="passwordSalt" ColumnName="passwordSalt" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vaccinations">
+      <EntityTypeMapping TypeName="myfarmModel.vaccination">
+        <MappingFragment StoreEntitySet="vaccinations">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="pigNumber" ColumnName="pigNumber" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="vaccinationID" ColumnName="vaccinationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vaccineTypes">
+      <EntityTypeMapping TypeName="myfarmModel.vaccineType">
+        <MappingFragment StoreEntitySet="vaccineTypes">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="typeOfVaccine" ColumnName="typeOfVaccine" />
+          <ScalarProperty Name="vaccineTypeID" ColumnName="vaccineTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

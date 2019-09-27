@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Open_Chequelist_Template.Models.pigRelationship>
+
+@{
+    ViewBag.Title = "FamilyTree";
+}
+
+<h2>FamilyTree</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fieldState.state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pig.tagNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pig1.tagNumber)
+        </th>
+        <th>
+           @Html.DisplayNameFor(model => model.pig2.tagNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fieldState.state)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pig.tagNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pig1.tagNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pig2.tagNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.pigRelationshipID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.pigRelationshipID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.pigRelationshipID })
+        </td>
+    </tr>
+}
+
+</table>
+<script src="~/Scripts/js/jquery-3.2.1.min.js"></script>
+
+ 
+

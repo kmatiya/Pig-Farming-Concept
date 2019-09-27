@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="OpenChequelistEntities">
+    <EntitySetMapping Name="AccountStates">
+      <EntityTypeMapping TypeName="Models.AccountState">
+        <MappingFragment StoreEntitySet="AccountStates">
+          <ScalarProperty Name="accountStateName" ColumnName="accountStateName" />
+          <ScalarProperty Name="accountStateID" ColumnName="accountStateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountTypes">
+      <EntityTypeMapping TypeName="Models.AccountType">
+        <MappingFragment StoreEntitySet="AccountTypes">
+          <ScalarProperty Name="accountTypeName" ColumnName="accountTypeName" />
+          <ScalarProperty Name="accountTypeID" ColumnName="accountTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="actvityLogs">
+      <EntityTypeMapping TypeName="Models.actvityLog">
+        <MappingFragment StoreEntitySet="actvityLogs">
+          <ScalarProperty Name="actionPerformed" ColumnName="actionPerformed" />
+          <ScalarProperty Name="dateAndTimeActionPerformed" ColumnName="dateAndTimeActionPerformed" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="actvityLogID" ColumnName="actvityLogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankAccounts">
+      <EntityTypeMapping TypeName="Models.BankAccount">
+        <MappingFragment StoreEntitySet="BankAccounts">
+          <ScalarProperty Name="accountBalance" ColumnName="accountBalance" />
+          <ScalarProperty Name="accountNumber" ColumnName="accountNumber" />
+          <ScalarProperty Name="accountType" ColumnName="accountType" />
+          <ScalarProperty Name="bankID" ColumnName="bankID" />
+          <ScalarProperty Name="bankAccountID" ColumnName="bankAccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banks">
+      <EntityTypeMapping TypeName="Models.Bank">
+        <MappingFragment StoreEntitySet="Banks">
+          <ScalarProperty Name="bankStatus" ColumnName="bankStatus" />
+          <ScalarProperty Name="bankLicenseExpiryDate" ColumnName="bankLicenseExpiryDate" />
+          <ScalarProperty Name="bankLicenseStartDate" ColumnName="bankLicenseStartDate" />
+          <ScalarProperty Name="bankLicense" ColumnName="bankLicense" />
+          <ScalarProperty Name="insitutionAddressID" ColumnName="insitutionAddressID" />
+          <ScalarProperty Name="bankID" ColumnName="bankID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeImages">
+      <EntityTypeMapping TypeName="Models.ChequeImage">
+        <MappingFragment StoreEntitySet="ChequeImages">
+          <ScalarProperty Name="bankID" ColumnName="bankID" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="chequeImageID" ColumnName="chequeImageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cheques">
+      <EntityTypeMapping TypeName="Models.Cheque">
+        <MappingFragment StoreEntitySet="Cheques">
+          <ScalarProperty Name="dateAndTimeOfPayment" ColumnName="dateAndTimeOfPayment" />
+          <ScalarProperty Name="chequeStatus" ColumnName="chequeStatus" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="receiverBankAccount" ColumnName="receiverBankAccount" />
+          <ScalarProperty Name="senderBankAccount" ColumnName="senderBankAccount" />
+          <ScalarProperty Name="bankTellerUserID" ColumnName="bankTellerUserID" />
+          <ScalarProperty Name="approverComments" ColumnName="approverComments" />
+          <ScalarProperty Name="approverUserID" ColumnName="approverUserID" />
+          <ScalarProperty Name="dateAndTimeOfApproval" ColumnName="dateAndTimeOfApproval" />
+          <ScalarProperty Name="capturerUserID" ColumnName="capturerUserID" />
+          <ScalarProperty Name="dateAndTimeOfCapture" ColumnName="dateAndTimeOfCapture" />
+          <ScalarProperty Name="chequeImageID" ColumnName="chequeImageID" />
+          <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+          <ScalarProperty Name="chequeNumber" ColumnName="chequeNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChequeStates">
+      <EntityTypeMapping TypeName="Models.ChequeState">
+        <MappingFragment StoreEntitySet="ChequeStates">
+          <ScalarProperty Name="chequeStateName" ColumnName="chequeStateName" />
+          <ScalarProperty Name="chequeStateID" ColumnName="chequeStateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsitutionAddresses">
+      <EntityTypeMapping TypeName="Models.InsitutionAddress">
+        <MappingFragment StoreEntitySet="InsitutionAddresses">
+          <ScalarProperty Name="institutionPhoneNumber" ColumnName="institutionPhoneNumber" />
+          <ScalarProperty Name="institutionEmail" ColumnName="institutionEmail" />
+          <ScalarProperty Name="institutionPhysicalAddress" ColumnName="institutionPhysicalAddress" />
+          <ScalarProperty Name="institutionName" ColumnName="institutionName" />
+          <ScalarProperty Name="institutionAddressID" ColumnName="institutionAddressID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Institutions">
+      <EntityTypeMapping TypeName="Models.Institution">
+        <MappingFragment StoreEntitySet="Institutions">
+          <ScalarProperty Name="institutionStatus" ColumnName="institutionStatus" />
+          <ScalarProperty Name="institutionSignatoryID" ColumnName="institutionSignatoryID" />
+          <ScalarProperty Name="account" ColumnName="account" />
+          <ScalarProperty Name="institutionAddressID" ColumnName="institutionAddressID" />
+          <ScalarProperty Name="institutionID" ColumnName="institutionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstitutionSignatories">
+      <EntityTypeMapping TypeName="Models.InstitutionSignatory">
+        <MappingFragment StoreEntitySet="InstitutionSignatories">
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="institutionSignatoryID" ColumnName="institutionSignatoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="licenses">
+      <EntityTypeMapping TypeName="Models.license">
+        <MappingFragment StoreEntitySet="licenses">
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="licenseName" ColumnName="licenseName" />
+          <ScalarProperty Name="licenseID" ColumnName="licenseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonalBankingCustomers">
+      <EntityTypeMapping TypeName="Models.PersonalBankingCustomer">
+        <MappingFragment StoreEntitySet="PersonalBankingCustomers">
+          <ScalarProperty Name="accountID" ColumnName="accountID" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="physicalAddress" ColumnName="physicalAddress" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="personalBankingCustomerID" ColumnName="personalBankingCustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transactions">
+      <EntityTypeMapping TypeName="Models.transaction">
+        <MappingFragment StoreEntitySet="transactions">
+          <ScalarProperty Name="nitelCommission" ColumnName="nitelCommission" />
+          <ScalarProperty Name="chequeID" ColumnName="chequeID" />
+          <ScalarProperty Name="transactionID" ColumnName="transactionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="Models.UserRole">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Models.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="passwordSalt" ColumnName="passwordSalt" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="accountStatus" ColumnName="accountStatus" />
+          <ScalarProperty Name="systemRole" ColumnName="systemRole" />
+          <ScalarProperty Name="institutionAddressID" ColumnName="institutionAddressID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

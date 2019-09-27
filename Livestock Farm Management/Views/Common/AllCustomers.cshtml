@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Open_Chequelist_Template.Models.customer>
+
+@{
+    ViewBag.Title = "AllCustomers";
+}
+
+<div class="app-title">
+    <h2>All Customers</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "AddAUser")
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-12" id="dataintable">
+        <div class="tile">
+            <div class="tile-body">
+                <p class="text-danger"></p>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered" id="sampleTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.customerName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.phoneNumber)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.email)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.customerType.type)
+                                </th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.customerName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.phoneNumber)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.email)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.customerType.type)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.customerID }) |
+                                        @Html.ActionLink("Details", "Details", new { id = item.customerID }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.customerID })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/js/jquery-3.2.1.min.js"></script>
+<script src="~/Scripts/js/plugins/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/js/plugins/dataTables.bootstrap.min.js"></script>
+<script>$('#sampleTable').DataTable();</script>

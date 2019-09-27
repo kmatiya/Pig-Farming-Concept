@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Open_Chequelist_Template.Models.input>
+
+@{
+    ViewBag.Title = "Expenses";
+}
+<div class="app-title">
+    <h2>Expenses</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "AddExpense")
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-12" id="dataintable">
+        <div class="tile">
+            <div class="tile-body">
+                <p class="text-danger"></p>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered" id="sampleTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.costPerProduct)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.numberOfProducts)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.total)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.date)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.fieldState.state)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.pig.tagNumber)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.productType.type)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.user.username)
+                                </th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.costPerProduct)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.numberOfProducts)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.total)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.date)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.fieldState.state)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.pig.tagNumber)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.productType.type)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.user.username)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.inputID }) |
+                                        @Html.ActionLink("Details", "Details", new { id = item.inputID }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.inputID })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/js/jquery-3.2.1.min.js"></script>
+<script src="~/Scripts/js/plugins/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/js/plugins/dataTables.bootstrap.min.js"></script>
+<script>$('#sampleTable').DataTable();</script>

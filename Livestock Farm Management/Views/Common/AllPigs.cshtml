@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Open_Chequelist_Template.Models.pig>
+
+@{
+    ViewBag.Title = "AllPigs";
+}
+<div class="app-title">
+    <h2>AllPigs</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+</div>
+
+    <div class="row">
+        <div class="col-md-12" id="dataintable">
+            <div class="tile">
+                <div class="tile-body">
+                    <p class="text-danger"></p>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered" id="sampleTable">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.tagNumber)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.pigColor)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.description)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.dateOfAcquisition)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.approximateAgeInYears)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.approximateAgeInMonths)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.pigSource.sourceName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.pigState.state)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.sex.sexName)
+                                    </th>
+                                    <th>Options</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.tagNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.pigColor)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.dateOfAcquisition)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.approximateAgeInYears)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.approximateAgeInMonths)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.pigSource.sourceName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.pigState.state)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.sex.sexName)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.pigNumber }) |
+                                            @Html.ActionLink("Details", "Details", new { id = item.pigNumber }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.pigNumber })
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/js/plugins/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/js/plugins/dataTables.bootstrap.min.js"></script>
+    <script>$('#sampleTable').DataTable();</script>

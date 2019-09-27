@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AccountStates">
+    <Key>
+      <PropertyRef Name="accountStateID" />
+    </Key>
+    <Property Name="accountStateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="accountStateName" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccountTypes">
+    <Key>
+      <PropertyRef Name="accountTypeID" />
+    </Key>
+    <Property Name="accountTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="accountTypeName" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="actvityLogs">
+    <Key>
+      <PropertyRef Name="actvityLogID" />
+    </Key>
+    <Property Name="actvityLogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="dateAndTimeActionPerformed" Type="datetime" Nullable="false" />
+    <Property Name="actionPerformed" Type="varchar" MaxLength="120" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BankAccounts">
+    <Key>
+      <PropertyRef Name="bankAccountID" />
+    </Key>
+    <Property Name="bankAccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bankID" Type="int" Nullable="false" />
+    <Property Name="accountType" Type="int" Nullable="false" />
+    <Property Name="accountNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="accountBalance" Type="money" />
+  </EntityType>
+  <EntityType Name="Banks">
+    <Key>
+      <PropertyRef Name="bankID" />
+    </Key>
+    <Property Name="bankID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="insitutionAddressID" Type="int" Nullable="false" />
+    <Property Name="bankLicense" Type="int" Nullable="false" />
+    <Property Name="bankLicenseStartDate" Type="datetime" Nullable="false" />
+    <Property Name="bankLicenseExpiryDate" Type="datetime" Nullable="false" />
+    <Property Name="bankStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="ChequeImages">
+    <Key>
+      <PropertyRef Name="chequeImageID" />
+    </Key>
+    <Property Name="chequeImageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="bankID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cheques">
+    <Key>
+      <PropertyRef Name="chequeNumber" />
+    </Key>
+    <Property Name="chequeNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chequeDate" Type="date" Nullable="false" />
+    <Property Name="chequeImageID" Type="int" Nullable="false" />
+    <Property Name="dateAndTimeOfCapture" Type="datetime" Nullable="false" />
+    <Property Name="capturerUserID" Type="int" Nullable="false" />
+    <Property Name="dateAndTimeOfApproval" Type="datetime" Nullable="false" />
+    <Property Name="approverUserID" Type="int" />
+    <Property Name="approverComments" Type="varchar" MaxLength="100" />
+    <Property Name="bankTellerUserID" Type="int" />
+    <Property Name="senderBankAccount" Type="int" Nullable="false" />
+    <Property Name="receiverBankAccount" Type="int" Nullable="false" />
+    <Property Name="amount" Type="money" />
+    <Property Name="chequeStatus" Type="int" Nullable="false" />
+    <Property Name="dateAndTimeOfPayment" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ChequeStates">
+    <Key>
+      <PropertyRef Name="chequeStateID" />
+    </Key>
+    <Property Name="chequeStateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chequeStateName" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InsitutionAddresses">
+    <Key>
+      <PropertyRef Name="institutionAddressID" />
+    </Key>
+    <Property Name="institutionAddressID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="institutionName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="institutionPhysicalAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="institutionEmail" Type="varchar" MaxLength="50" />
+    <Property Name="institutionPhoneNumber" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Institutions">
+    <Key>
+      <PropertyRef Name="institutionID" />
+    </Key>
+    <Property Name="institutionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="institutionAddressID" Type="int" Nullable="false" />
+    <Property Name="account" Type="int" Nullable="false" />
+    <Property Name="institutionSignatoryID" Type="int" Nullable="false" />
+    <Property Name="institutionStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InstitutionSignatories">
+    <Key>
+      <PropertyRef Name="institutionSignatoryID" />
+    </Key>
+    <Property Name="institutionSignatoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="phoneNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="licenses">
+    <Key>
+      <PropertyRef Name="licenseID" />
+    </Key>
+    <Property Name="licenseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="licenseName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="duration" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonalBankingCustomers">
+    <Key>
+      <PropertyRef Name="personalBankingCustomerID" />
+    </Key>
+    <Property Name="personalBankingCustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="physicalAddress" Type="varchar" MaxLength="50" />
+    <Property Name="phoneNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="accountID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="transactions">
+    <Key>
+      <PropertyRef Name="transactionID" />
+    </Key>
+    <Property Name="transactionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chequeID" Type="int" Nullable="false" />
+    <Property Name="nitelCommission" Type="money" />
+  </EntityType>
+  <EntityType Name="UserRoles">
+    <Key>
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="roleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="roleName" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="institutionAddressID" Type="int" />
+    <Property Name="systemRole" Type="int" Nullable="false" />
+    <Property Name="accountStatus" Type="int" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="passwordSalt" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_actvityLogs_users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="actvityLogs" Type="Self.actvityLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="actvityLogs">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_bankAccounts_accountTypes">
+    <End Role="AccountTypes" Type="Self.AccountTypes" Multiplicity="1" />
+    <End Role="BankAccounts" Type="Self.BankAccounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountTypes">
+        <PropertyRef Name="accountTypeID" />
+      </Principal>
+      <Dependent Role="BankAccounts">
+        <PropertyRef Name="accountType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankAccounts_BankAccounts">
+    <End Role="BankAccounts" Type="Self.BankAccounts" Multiplicity="1" />
+    <End Role="BankAccounts1" Type="Self.BankAccounts" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BankAccounts">
+        <PropertyRef Name="bankAccountID" />
+      </Principal>
+      <Dependent Role="BankAccounts1">
+        <PropertyRef Name="bankAccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankAccounts_Banks">
+    <End Role="Banks" Type="Self.Banks" Multiplicity="1" />
+    <End Role="BankAccounts" Type="Self.BankAccounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banks">
+        <PropertyRef Name="bankID" />
+      </Principal>
+      <Dependent Role="BankAccounts">
+        <PropertyRef Name="bankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_banks_accountStates">
+    <End Role="AccountStates" Type="Self.AccountStates" Multiplicity="0..1" />
+    <End Role="Banks" Type="Self.Banks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountStates">
+        <PropertyRef Name="accountStateID" />
+      </Principal>
+      <Dependent Role="Banks">
+        <PropertyRef Name="bankStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_banks_insitutionAddresses">
+    <End Role="InsitutionAddresses" Type="Self.InsitutionAddresses" Multiplicity="1" />
+    <End Role="Banks" Type="Self.Banks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InsitutionAddresses">
+        <PropertyRef Name="institutionAddressID" />
+      </Principal>
+      <Dependent Role="Banks">
+        <PropertyRef Name="insitutionAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_banks_licenses">
+    <End Role="licenses" Type="Self.licenses" Multiplicity="1" />
+    <End Role="Banks" Type="Self.Banks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="licenses">
+        <PropertyRef Name="licenseID" />
+      </Principal>
+      <Dependent Role="Banks">
+        <PropertyRef Name="bankLicense" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankTeller_cheques">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Cheques" Type="Self.Cheques" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="Cheques">
+        <PropertyRef Name="bankTellerUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_chequeApprovers_cheques">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Cheques" Type="Self.Cheques" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="Cheques">
+        <PropertyRef Name="approverUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_chequeCapturers_cheques">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Cheques" Type="Self.Cheques" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="Cheques">
+        <PropertyRef Name="capturerUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_chequeImages_chequeImages">
+    <End Role="Banks" Type="Self.Banks" Multiplicity="1" />
+    <End Role="ChequeImages" Type="Self.ChequeImages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banks">
+        <PropertyRef Name="bankID" />
+      </Principal>
+      <Dependent Role="ChequeImages">
+        <PropertyRef Name="bankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cheques_chequesImages">
+    <End Role="ChequeImages" Type="Self.ChequeImages" Multiplicity="1" />
+    <End Role="Cheques" Type="Self.Cheques" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChequeImages">
+        <PropertyRef Name="chequeImageID" />
+      </Principal>
+      <Dependent Role="Cheques">
+        <PropertyRef Name="chequeImageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cheques_chequeStates">
+    <End Role="ChequeStates" Type="Self.ChequeStates" Multiplicity="1" />
+    <End Role="Cheques" Type="Self.Cheques" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChequeStates">
+        <PropertyRef Name="chequeStateID" />
+      </Principal>
+      <Dependent Role="Cheques">
+        <PropertyRef Name="chequeStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_institutions_accountStates">
+    <End Role="AccountStates" Type="Self.AccountStates" Multiplicity="1" />
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountStates">
+        <PropertyRef Name="accountStateID" />
+      </Principal>
+      <Dependent Role="Institutions">
+        <PropertyRef Name="institutionStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_institutions_bankAccounts">
+    <End Role="BankAccounts" Type="Self.BankAccounts" Multiplicity="1" />
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankAccounts">
+        <PropertyRef Name="bankAccountID" />
+      </Principal>
+      <Dependent Role="Institutions">
+        <PropertyRef Name="account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_institutions_insitutionAddresses">
+    <End Role="InsitutionAddresses" Type="Self.InsitutionAddresses" Multiplicity="1" />
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InsitutionAddresses">
+        <PropertyRef Name="institutionAddressID" />
+      </Principal>
+      <Dependent Role="Institutions">
+        <PropertyRef Name="institutionAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_institutions_institutionSignatories">
+    <End Role="InstitutionSignatories" Type="Self.InstitutionSignatories" Multiplicity="1" />
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstitutionSignatories">
+        <PropertyRef Name="institutionSignatoryID" />
+      </Principal>
+      <Dependent Role="Institutions">
+        <PropertyRef Name="institutionSignatoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_institutionSignatories_institutionSignatories">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="InstitutionSignatories" Type="Self.InstitutionSignatories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="InstitutionSignatories">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_personalBankingCustomers_bankAccounts">
+    <End Role="BankAccounts" Type="Self.BankAccounts" Multiplicity="1" />
+    <End Role="PersonalBankingCustomers" Type="Self.PersonalBankingCustomers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankAccounts">
+        <PropertyRef Name="bankAccountID" />
+      </Principal>
+      <Dependent Role="PersonalBankingCustomers">
+        <PropertyRef Name="accountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_personalBankingCustomers_users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="PersonalBankingCustomers" Type="Self.PersonalBankingCustomers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="PersonalBankingCustomers">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_receiverAccounts_cheques">
+    <End Role="BankAccounts" Type="Self.BankAccounts" Multiplicity="1" />
+    <End Role="Cheques" Type="Self.Cheques" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankAccounts">
+        <PropertyRef Name="bankAccountID" />
+      </Principal>
+      <Dependent Role="Cheques">
+        <PropertyRef Name="receiverBankAccount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_senderAccounts_cheques">
+    <End Role="BankAccounts" Type="Self.BankAccounts" Multiplicity="1" />
+    <End Role="Cheques" Type="Self.Cheques" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankAccounts">
+        <PropertyRef Name="bankAccountID" />
+      </Principal>
+      <Dependent Role="Cheques">
+        <PropertyRef Name="senderBankAccount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_transactions_Cheques">
+    <End Role="Cheques" Type="Self.Cheques" Multiplicity="1" />
+    <End Role="transactions" Type="Self.transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cheques">
+        <PropertyRef Name="chequeNumber" />
+      </Principal>
+      <Dependent Role="transactions">
+        <PropertyRef Name="chequeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_accountStates">
+    <End Role="AccountStates" Type="Self.AccountStates" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountStates">
+        <PropertyRef Name="accountStateID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="accountStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_insitutionAddresses">
+    <End Role="InsitutionAddresses" Type="Self.InsitutionAddresses" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InsitutionAddresses">
+        <PropertyRef Name="institutionAddressID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="institutionAddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_userRoles">
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRoles">
+        <PropertyRef Name="roleID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="systemRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelsStoreContainer">
+    <EntitySet Name="AccountStates" EntityType="Self.AccountStates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccountTypes" EntityType="Self.AccountTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="actvityLogs" EntityType="Self.actvityLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BankAccounts" EntityType="Self.BankAccounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Banks" EntityType="Self.Banks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChequeImages" EntityType="Self.ChequeImages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cheques" EntityType="Self.Cheques" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChequeStates" EntityType="Self.ChequeStates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InsitutionAddresses" EntityType="Self.InsitutionAddresses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Institutions" EntityType="Self.Institutions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InstitutionSignatories" EntityType="Self.InstitutionSignatories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="licenses" EntityType="Self.licenses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonalBankingCustomers" EntityType="Self.PersonalBankingCustomers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transactions" EntityType="Self.transactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_actvityLogs_users" Association="Self.FK_actvityLogs_users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="actvityLogs" EntitySet="actvityLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_bankAccounts_accountTypes" Association="Self.FK_bankAccounts_accountTypes">
+      <End Role="AccountTypes" EntitySet="AccountTypes" />
+      <End Role="BankAccounts" EntitySet="BankAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankAccounts_BankAccounts" Association="Self.FK_BankAccounts_BankAccounts">
+      <End Role="BankAccounts" EntitySet="BankAccounts" />
+      <End Role="BankAccounts1" EntitySet="BankAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankAccounts_Banks" Association="Self.FK_BankAccounts_Banks">
+      <End Role="Banks" EntitySet="Banks" />
+      <End Role="BankAccounts" EntitySet="BankAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_banks_accountStates" Association="Self.FK_banks_accountStates">
+      <End Role="AccountStates" EntitySet="AccountStates" />
+      <End Role="Banks" EntitySet="Banks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_banks_insitutionAddresses" Association="Self.FK_banks_insitutionAddresses">
+      <End Role="InsitutionAddresses" EntitySet="InsitutionAddresses" />
+      <End Role="Banks" EntitySet="Banks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_banks_licenses" Association="Self.FK_banks_licenses">
+      <End Role="licenses" EntitySet="licenses" />
+      <End Role="Banks" EntitySet="Banks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankTeller_cheques" Association="Self.FK_BankTeller_cheques">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Cheques" EntitySet="Cheques" />
+    </AssociationSet>
+    <AssociationSet Name="FK_chequeApprovers_cheques" Association="Self.FK_chequeApprovers_cheques">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Cheques" EntitySet="Cheques" />
+    </AssociationSet>
+    <AssociationSet Name="FK_chequeCapturers_cheques" Association="Self.FK_chequeCapturers_cheques">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Cheques" EntitySet="Cheques" />
+    </AssociationSet>
+    <AssociationSet Name="FK_chequeImages_chequeImages" Association="Self.FK_chequeImages_chequeImages">
+      <End Role="Banks" EntitySet="Banks" />
+      <End Role="ChequeImages" EntitySet="ChequeImages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cheques_chequesImages" Association="Self.FK_cheques_chequesImages">
+      <End Role="ChequeImages" EntitySet="ChequeImages" />
+      <End Role="Cheques" EntitySet="Cheques" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cheques_chequeStates" Association="Self.FK_cheques_chequeStates">
+      <End Role="ChequeStates" EntitySet="ChequeStates" />
+      <End Role="Cheques" EntitySet="Cheques" />
+    </AssociationSet>
+    <AssociationSet Name="FK_institutions_accountStates" Association="Self.FK_institutions_accountStates">
+      <End Role="AccountStates" EntitySet="AccountStates" />
+      <End Role="Institutions" EntitySet="Institutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_institutions_bankAccounts" Association="Self.FK_institutions_bankAccounts">
+      <End Role="BankAccounts" EntitySet="BankAccounts" />
+      <End Role="Institutions" EntitySet="Institutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_institutions_insitutionAddresses" Association="Self.FK_institutions_insitutionAddresses">
+      <End Role="InsitutionAddresses" EntitySet="InsitutionAddresses" />
+      <End Role="Institutions" EntitySet="Institutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_institutions_institutionSignatories" Association="Self.FK_institutions_institutionSignatories">
+      <End Role="InstitutionSignatories" EntitySet="InstitutionSignatories" />
+      <End Role="Institutions" EntitySet="Institutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_institutionSignatories_institutionSignatories" Association="Self.FK_institutionSignatories_institutionSignatories">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="InstitutionSignatories" EntitySet="InstitutionSignatories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_personalBankingCustomers_bankAccounts" Association="Self.FK_personalBankingCustomers_bankAccounts">
+      <End Role="BankAccounts" EntitySet="BankAccounts" />
+      <End Role="PersonalBankingCustomers" EntitySet="PersonalBankingCustomers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_personalBankingCustomers_users" Association="Self.FK_personalBankingCustomers_users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="PersonalBankingCustomers" EntitySet="PersonalBankingCustomers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_receiverAccounts_cheques" Association="Self.FK_receiverAccounts_cheques">
+      <End Role="BankAccounts" EntitySet="BankAccounts" />
+      <End Role="Cheques" EntitySet="Cheques" />
+    </AssociationSet>
+    <AssociationSet Name="FK_senderAccounts_cheques" Association="Self.FK_senderAccounts_cheques">
+      <End Role="BankAccounts" EntitySet="BankAccounts" />
+      <End Role="Cheques" EntitySet="Cheques" />
+    </AssociationSet>
+    <AssociationSet Name="FK_transactions_Cheques" Association="Self.FK_transactions_Cheques">
+      <End Role="Cheques" EntitySet="Cheques" />
+      <End Role="transactions" EntitySet="transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_accountStates" Association="Self.FK_users_accountStates">
+      <End Role="AccountStates" EntitySet="AccountStates" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_insitutionAddresses" Association="Self.FK_users_insitutionAddresses">
+      <End Role="InsitutionAddresses" EntitySet="InsitutionAddresses" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_userRoles" Association="Self.FK_users_userRoles">
+      <End Role="UserRoles" EntitySet="UserRoles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

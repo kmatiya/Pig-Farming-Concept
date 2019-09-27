@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Open_Chequelist_Template.Models.user>
+
+@{
+    ViewBag.Title = "AllUsers";
+}
+<div class="app-title">
+    <h2>AllUsers</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "AddAUser")
+    </p>
+</div>
+    <div class="row">
+        <div class="col-md-12" id="dataintable">
+            <div class="tile">
+                <div class="tile-body">
+                    <p class="text-danger"></p>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered" id="sampleTable">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.username)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.firstName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.lastName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.phoneNumber)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.email)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.password)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.systemRole.roleName)
+                                    </th>
+                                    <th>Options</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.username)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.firstName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.lastName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.phoneNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.email)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.password)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.systemRole.roleName)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.userID }) |
+                                            @Html.ActionLink("Details", "Details", new { id = item.userID }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.userID })
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/js/plugins/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/js/plugins/dataTables.bootstrap.min.js"></script>
+    <script>$('#sampleTable').DataTable();</script>

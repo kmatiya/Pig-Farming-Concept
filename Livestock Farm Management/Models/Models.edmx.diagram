@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d052ca2dcf904311a5e0fd796519cacb" Name="Diagram1">
+        <EntityTypeShape EntityType="myfarmModel.customer" Width="1.5" PointX="6" PointY="23.75" />
+        <EntityTypeShape EntityType="myfarmModel.customerType" Width="1.5" PointX="3.75" PointY="24.125" />
+        <EntityTypeShape EntityType="myfarmModel.deadPig" Width="1.5" PointX="5.25" PointY="12.75" />
+        <EntityTypeShape EntityType="myfarmModel.fieldState" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="myfarmModel.input" Width="1.5" PointX="5.25" PointY="8.125" />
+        <EntityTypeShape EntityType="myfarmModel.outSourcedPig" Width="1.5" PointX="11.25" PointY="12.75" />
+        <EntityTypeShape EntityType="myfarmModel.pigRelationship" Width="1.5" PointX="8.25" PointY="16.5" />
+        <EntityTypeShape EntityType="myfarmModel.pig" Width="1.5" PointX="3" PointY="11.25" />
+        <EntityTypeShape EntityType="myfarmModel.pigSource" Width="1.5" PointX="0.75" PointY="16.25" />
+        <EntityTypeShape EntityType="myfarmModel.pigState" Width="1.5" PointX="0.75" PointY="13" />
+        <EntityTypeShape EntityType="myfarmModel.productType" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="myfarmModel.sale" Width="1.5" PointX="8.25" PointY="12.375" />
+        <EntityTypeShape EntityType="myfarmModel.sex" Width="1.5" PointX="0.75" PointY="9.875" />
+        <EntityTypeShape EntityType="myfarmModel.sickPig" Width="1.5" PointX="5.25" PointY="16.625" />
+        <EntityTypeShape EntityType="myfarmModel.supplier" Width="1.5" PointX="9" PointY="4.75" />
+        <EntityTypeShape EntityType="myfarmModel.systemRole" Width="1.5" PointX="0.75" PointY="20.375" />
+        <EntityTypeShape EntityType="myfarmModel.user" Width="1.5" PointX="3" PointY="19.5" />
+        <EntityTypeShape EntityType="myfarmModel.vaccination" Width="1.5" PointX="8.25" PointY="8.625" />
+        <EntityTypeShape EntityType="myfarmModel.vaccineType" Width="1.5" PointX="6" PointY="5" />
+        <AssociationConnector Association="myfarmModel.FK_customers_customerTypes" />
+        <AssociationConnector Association="myfarmModel.FK_sales_customers" />
+        <AssociationConnector Association="myfarmModel.FK_deadPigs_fieldStates" />
+        <AssociationConnector Association="myfarmModel.FK_deadPigs_pigs" />
+        <AssociationConnector Association="myfarmModel.FK_inputs_fieldStates" />
+        <AssociationConnector Association="myfarmModel.FK_outSourcedPigID_fieldStates" />
+        <AssociationConnector Association="myfarmModel.FK_pigRelationships_fieldStates" />
+        <AssociationConnector Association="myfarmModel.FK_productTypes_fieldStates" />
+        <AssociationConnector Association="myfarmModel.FK_sales_fieldStates" />
+        <AssociationConnector Association="myfarmModel.FK_suppliers_fieldStates" />
+        <AssociationConnector Association="myfarmModel.FK_vaccinations_fieldStates" />
+        <AssociationConnector Association="myfarmModel.FK_inputs_pigs" />
+        <AssociationConnector Association="myfarmModel.FK_inputs_productTypes" />
+        <AssociationConnector Association="myfarmModel.FK_inputs_users" />
+        <AssociationConnector Association="myfarmModel.FK_outSourcedPigID_pigs" />
+        <AssociationConnector Association="myfarmModel.FK_outSourcedPigID_suppliers" />
+        <AssociationConnector Association="myfarmModel.FK_pigRelationships_pigs" />
+        <AssociationConnector Association="myfarmModel.FK_pigRelationships_pigs1" />
+        <AssociationConnector Association="myfarmModel.FK_pigRelationships_pigs2" />
+        <AssociationConnector Association="myfarmModel.FK_pigs_pigSources" />
+        <AssociationConnector Association="myfarmModel.FK_pigs_pigStates" />
+        <AssociationConnector Association="myfarmModel.FK_pigs_sexes" />
+        <AssociationConnector Association="myfarmModel.FK_sales_pigs" />
+        <AssociationConnector Association="myfarmModel.FK_sickPigs_pigs" />
+        <AssociationConnector Association="myfarmModel.FK_vaccinations_pigs" />
+        <AssociationConnector Association="myfarmModel.FK_sickPigs_pigStates" />
+        <AssociationConnector Association="myfarmModel.FK_sales_users" />
+        <AssociationConnector Association="myfarmModel.FK_users_systemRoles" />
+        <AssociationConnector Association="myfarmModel.FK_vaccinations_vaccineTypes" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

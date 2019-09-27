@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="myfarmModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="myfarmEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="fieldStates" EntityType="myfarmModel.fieldState" />
+    <EntitySet Name="inputs" EntityType="myfarmModel.input" />
+    <EntitySet Name="outSourcedPigs" EntityType="myfarmModel.outSourcedPig" />
+    <EntitySet Name="pigRelationships" EntityType="myfarmModel.pigRelationship" />
+    <EntitySet Name="pigs" EntityType="myfarmModel.pig" />
+    <EntitySet Name="pigSources" EntityType="myfarmModel.pigSource" />
+    <EntitySet Name="pigStates" EntityType="myfarmModel.pigState" />
+    <EntitySet Name="productTypes" EntityType="myfarmModel.productType" />
+    <EntitySet Name="sales" EntityType="myfarmModel.sale" />
+    <EntitySet Name="sexes" EntityType="myfarmModel.sex" />
+    <EntitySet Name="suppliers" EntityType="myfarmModel.supplier" />
+    <EntitySet Name="systemRoles" EntityType="myfarmModel.systemRole" />
+    <EntitySet Name="users" EntityType="myfarmModel.user" />
+    <EntitySet Name="vaccinations" EntityType="myfarmModel.vaccination" />
+    <EntitySet Name="vaccineTypes" EntityType="myfarmModel.vaccineType" />
+    <AssociationSet Name="FK_inputs_fieldStates" Association="myfarmModel.FK_inputs_fieldStates">
+      <End Role="fieldState" EntitySet="fieldStates" />
+      <End Role="input" EntitySet="inputs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_outSourcedPigID_fieldStates" Association="myfarmModel.FK_outSourcedPigID_fieldStates">
+      <End Role="fieldState" EntitySet="fieldStates" />
+      <End Role="outSourcedPig" EntitySet="outSourcedPigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pigRelationships_fieldStates" Association="myfarmModel.FK_pigRelationships_fieldStates">
+      <End Role="fieldState" EntitySet="fieldStates" />
+      <End Role="pigRelationship" EntitySet="pigRelationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productTypes_fieldStates" Association="myfarmModel.FK_productTypes_fieldStates">
+      <End Role="fieldState" EntitySet="fieldStates" />
+      <End Role="productType" EntitySet="productTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sales_fieldStates" Association="myfarmModel.FK_sales_fieldStates">
+      <End Role="fieldState" EntitySet="fieldStates" />
+      <End Role="sale" EntitySet="sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_suppliers_fieldStates" Association="myfarmModel.FK_suppliers_fieldStates">
+      <End Role="fieldState" EntitySet="fieldStates" />
+      <End Role="supplier" EntitySet="suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vaccinations_fieldStates" Association="myfarmModel.FK_vaccinations_fieldStates">
+      <End Role="fieldState" EntitySet="fieldStates" />
+      <End Role="vaccination" EntitySet="vaccinations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inputs_pigs" Association="myfarmModel.FK_inputs_pigs">
+      <End Role="pig" EntitySet="pigs" />
+      <End Role="input" EntitySet="inputs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inputs_productTypes" Association="myfarmModel.FK_inputs_productTypes">
+      <End Role="productType" EntitySet="productTypes" />
+      <End Role="input" EntitySet="inputs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inputs_users" Association="myfarmModel.FK_inputs_users">
+      <End Role="user" EntitySet="users" />
+      <End Role="input" EntitySet="inputs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_outSourcedPigID_pigs" Association="myfarmModel.FK_outSourcedPigID_pigs">
+      <End Role="pig" EntitySet="pigs" />
+      <End Role="outSourcedPig" EntitySet="outSourcedPigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_outSourcedPigID_suppliers" Association="myfarmModel.FK_outSourcedPigID_suppliers">
+      <End Role="supplier" EntitySet="suppliers" />
+      <End Role="outSourcedPig" EntitySet="outSourcedPigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pigRelationships_pigs" Association="myfarmModel.FK_pigRelationships_pigs">
+      <End Role="pig" EntitySet="pigs" />
+      <End Role="pigRelationship" EntitySet="pigRelationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pigRelationships_pigs1" Association="myfarmModel.FK_pigRelationships_pigs1">
+      <End Role="pig" EntitySet="pigs" />
+      <End Role="pigRelationship" EntitySet="pigRelationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pigRelationships_pigs2" Association="myfarmModel.FK_pigRelationships_pigs2">
+      <End Role="pig" EntitySet="pigs" />
+      <End Role="pigRelationship" EntitySet="pigRelationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pigs_pigSources" Association="myfarmModel.FK_pigs_pigSources">
+      <End Role="pigSource" EntitySet="pigSources" />
+      <End Role="pig" EntitySet="pigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pigs_pigStates" Association="myfarmModel.FK_pigs_pigStates">
+      <End Role="pigState" EntitySet="pigStates" />
+      <End Role="pig" EntitySet="pigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pigs_sexes" Association="myfarmModel.FK_pigs_sexes">
+      <End Role="sex" EntitySet="sexes" />
+      <End Role="pig" EntitySet="pigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sales_pigs" Association="myfarmModel.FK_sales_pigs">
+      <End Role="pig" EntitySet="pigs" />
+      <End Role="sale" EntitySet="sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vaccinations_pigs" Association="myfarmModel.FK_vaccinations_pigs">
+      <End Role="pig" EntitySet="pigs" />
+      <End Role="vaccination" EntitySet="vaccinations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sales_users" Association="myfarmModel.FK_sales_users">
+      <End Role="user" EntitySet="users" />
+      <End Role="sale" EntitySet="sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_systemRoles" Association="myfarmModel.FK_users_systemRoles">
+      <End Role="systemRole" EntitySet="systemRoles" />
+      <End Role="user" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vaccinations_vaccineTypes" Association="myfarmModel.FK_vaccinations_vaccineTypes">
+      <End Role="vaccineType" EntitySet="vaccineTypes" />
+      <End Role="vaccination" EntitySet="vaccinations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="fieldState">
+    <Key>
+      <PropertyRef Name="fieldStatusID" />
+    </Key>
+    <Property Name="fieldStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="state" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="inputs" Relationship="myfarmModel.FK_inputs_fieldStates" FromRole="fieldState" ToRole="input" />
+    <NavigationProperty Name="outSourcedPigs" Relationship="myfarmModel.FK_outSourcedPigID_fieldStates" FromRole="fieldState" ToRole="outSourcedPig" />
+    <NavigationProperty Name="pigRelationships" Relationship="myfarmModel.FK_pigRelationships_fieldStates" FromRole="fieldState" ToRole="pigRelationship" />
+    <NavigationProperty Name="productTypes" Relationship="myfarmModel.FK_productTypes_fieldStates" FromRole="fieldState" ToRole="productType" />
+    <NavigationProperty Name="sales" Relationship="myfarmModel.FK_sales_fieldStates" FromRole="fieldState" ToRole="sale" />
+    <NavigationProperty Name="suppliers" Relationship="myfarmModel.FK_suppliers_fieldStates" FromRole="fieldState" ToRole="supplier" />
+    <NavigationProperty Name="vaccinations" Relationship="myfarmModel.FK_vaccinations_fieldStates" FromRole="fieldState" ToRole="vaccination" />
+  </EntityType>
+  <EntityType Name="input">
+    <Key>
+      <PropertyRef Name="inputID" />
+    </Key>
+    <Property Name="inputID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product" Type="Int32" Nullable="false" />
+    <Property Name="costPerProduct" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="numberOfProducts" Type="Int32" Nullable="false" />
+    <Property Name="total" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="pigID" Type="Int32" />
+    <NavigationProperty Name="fieldState" Relationship="myfarmModel.FK_inputs_fieldStates" FromRole="input" ToRole="fieldState" />
+    <NavigationProperty Name="pig" Relationship="myfarmModel.FK_inputs_pigs" FromRole="input" ToRole="pig" />
+    <NavigationProperty Name="productType" Relationship="myfarmModel.FK_inputs_productTypes" FromRole="input" ToRole="productType" />
+    <NavigationProperty Name="user" Relationship="myfarmModel.FK_inputs_users" FromRole="input" ToRole="user" />
+  </EntityType>
+  <EntityType Name="outSourcedPig">
+    <Key>
+      <PropertyRef Name="outSourcedPigID" />
+    </Key>
+    <Property Name="outSourcedPigID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pigNumber" Type="Int32" Nullable="false" />
+    <Property Name="supplierID" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="fieldState" Relationship="myfarmModel.FK_outSourcedPigID_fieldStates" FromRole="outSourcedPig" ToRole="fieldState" />
+    <NavigationProperty Name="pig" Relationship="myfarmModel.FK_outSourcedPigID_pigs" FromRole="outSourcedPig" ToRole="pig" />
+    <NavigationProperty Name="supplier" Relationship="myfarmModel.FK_outSourcedPigID_suppliers" FromRole="outSourcedPig" ToRole="supplier" />
+  </EntityType>
+  <EntityType Name="pigRelationship">
+    <Key>
+      <PropertyRef Name="pigRelationshipID" />
+    </Key>
+    <Property Name="pigRelationshipID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="femalePig" Type="Int32" />
+    <Property Name="malePig" Type="Int32" />
+    <Property Name="siblings" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" />
+    <NavigationProperty Name="fieldState" Relationship="myfarmModel.FK_pigRelationships_fieldStates" FromRole="pigRelationship" ToRole="fieldState" />
+    <NavigationProperty Name="pig" Relationship="myfarmModel.FK_pigRelationships_pigs" FromRole="pigRelationship" ToRole="pig" />
+    <NavigationProperty Name="pig1" Relationship="myfarmModel.FK_pigRelationships_pigs1" FromRole="pigRelationship" ToRole="pig" />
+    <NavigationProperty Name="pig2" Relationship="myfarmModel.FK_pigRelationships_pigs2" FromRole="pigRelationship" ToRole="pig" />
+  </EntityType>
+  <EntityType Name="pig">
+    <Key>
+      <PropertyRef Name="pigNumber" />
+    </Key>
+    <Property Name="pigNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tagNumber" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="pigSex" Type="Int32" Nullable="false" />
+    <Property Name="pigColor" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="dateOfAcquisition" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="approximateAgeInYears" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="approximateAgeInMonths" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="source" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="inputs" Relationship="myfarmModel.FK_inputs_pigs" FromRole="pig" ToRole="input" />
+    <NavigationProperty Name="outSourcedPigs" Relationship="myfarmModel.FK_outSourcedPigID_pigs" FromRole="pig" ToRole="outSourcedPig" />
+    <NavigationProperty Name="pigRelationships" Relationship="myfarmModel.FK_pigRelationships_pigs" FromRole="pig" ToRole="pigRelationship" />
+    <NavigationProperty Name="pigRelationships1" Relationship="myfarmModel.FK_pigRelationships_pigs1" FromRole="pig" ToRole="pigRelationship" />
+    <NavigationProperty Name="pigRelationships2" Relationship="myfarmModel.FK_pigRelationships_pigs2" FromRole="pig" ToRole="pigRelationship" />
+    <NavigationProperty Name="pigSource" Relationship="myfarmModel.FK_pigs_pigSources" FromRole="pig" ToRole="pigSource" />
+    <NavigationProperty Name="pigState" Relationship="myfarmModel.FK_pigs_pigStates" FromRole="pig" ToRole="pigState" />
+    <NavigationProperty Name="sex" Relationship="myfarmModel.FK_pigs_sexes" FromRole="pig" ToRole="sex" />
+    <NavigationProperty Name="sales" Relationship="myfarmModel.FK_sales_pigs" FromRole="pig" ToRole="sale" />
+    <NavigationProperty Name="vaccinations" Relationship="myfarmModel.FK_vaccinations_pigs" FromRole="pig" ToRole="vaccination" />
+  </EntityType>
+  <EntityType Name="pigSource">
+    <Key>
+      <PropertyRef Name="sourceID" />
+    </Key>
+    <Property Name="sourceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sourceName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="pigs" Relationship="myfarmModel.FK_pigs_pigSources" FromRole="pigSource" ToRole="pig" />
+  </EntityType>
+  <EntityType Name="pigState">
+    <Key>
+      <PropertyRef Name="pigStateID" />
+    </Key>
+    <Property Name="pigStateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="state" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="pigs" Relationship="myfarmModel.FK_pigs_pigStates" FromRole="pigState" ToRole="pig" />
+  </EntityType>
+  <EntityType Name="productType">
+    <Key>
+      <PropertyRef Name="productTypeID" />
+    </Key>
+    <Property Name="productTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="fieldState" Relationship="myfarmModel.FK_productTypes_fieldStates" FromRole="productType" ToRole="fieldState" />
+    <NavigationProperty Name="inputs" Relationship="myfarmModel.FK_inputs_productTypes" FromRole="productType" ToRole="input" />
+  </EntityType>
+  <EntityType Name="sale">
+    <Key>
+      <PropertyRef Name="salesID" />
+    </Key>
+    <Property Name="salesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pigNumber" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="salesDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="fieldState" Relationship="myfarmModel.FK_sales_fieldStates" FromRole="sale" ToRole="fieldState" />
+    <NavigationProperty Name="pig" Relationship="myfarmModel.FK_sales_pigs" FromRole="sale" ToRole="pig" />
+    <NavigationProperty Name="user" Relationship="myfarmModel.FK_sales_users" FromRole="sale" ToRole="user" />
+  </EntityType>
+  <EntityType Name="sex">
+    <Key>
+      <PropertyRef Name="sexID" />
+    </Key>
+    <Property Name="sexID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sexName" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="pigs" Relationship="myfarmModel.FK_pigs_sexes" FromRole="sex" ToRole="pig" />
+  </EntityType>
+  <EntityType Name="supplier">
+    <Key>
+      <PropertyRef Name="supplierID" />
+    </Key>
+    <Property Name="supplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="supplierName" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="supplierPhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="supplierEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="supplierState" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="fieldState" Relationship="myfarmModel.FK_suppliers_fieldStates" FromRole="supplier" ToRole="fieldState" />
+    <NavigationProperty Name="outSourcedPigs" Relationship="myfarmModel.FK_outSourcedPigID_suppliers" FromRole="supplier" ToRole="outSourcedPig" />
+  </EntityType>
+  <EntityType Name="systemRole">
+    <Key>
+      <PropertyRef Name="systemRoleID" />
+    </Key>
+    <Property Name="systemRoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="roleName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="users" Relationship="myfarmModel.FK_users_systemRoles" FromRole="systemRole" ToRole="user" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="firstName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="lastName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="phoneNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="Int32" Nullable="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="passwordSalt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="inputs" Relationship="myfarmModel.FK_inputs_users" FromRole="user" ToRole="input" />
+    <NavigationProperty Name="sales" Relationship="myfarmModel.FK_sales_users" FromRole="user" ToRole="sale" />
+    <NavigationProperty Name="systemRole" Relationship="myfarmModel.FK_users_systemRoles" FromRole="user" ToRole="systemRole" />
+  </EntityType>
+  <EntityType Name="vaccination">
+    <Key>
+      <PropertyRef Name="vaccinationID" />
+    </Key>
+    <Property Name="vaccinationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="Int32" Nullable="false" />
+    <Property Name="pigNumber" Type="Int32" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="fieldState" Relationship="myfarmModel.FK_vaccinations_fieldStates" FromRole="vaccination" ToRole="fieldState" />
+    <NavigationProperty Name="pig" Relationship="myfarmModel.FK_vaccinations_pigs" FromRole="vaccination" ToRole="pig" />
+    <NavigationProperty Name="vaccineType" Relationship="myfarmModel.FK_vaccinations_vaccineTypes" FromRole="vaccination" ToRole="vaccineType" />
+  </EntityType>
+  <EntityType Name="vaccineType">
+    <Key>
+      <PropertyRef Name="vaccineTypeID" />
+    </Key>
+    <Property Name="vaccineTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="typeOfVaccine" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="vaccinations" Relationship="myfarmModel.FK_vaccinations_vaccineTypes" FromRole="vaccineType" ToRole="vaccination" />
+  </EntityType>
+  <Association Name="FK_inputs_fieldStates">
+    <End Type="myfarmModel.fieldState" Role="fieldState" Multiplicity="1" />
+    <End Type="myfarmModel.input" Role="input" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fieldState">
+        <PropertyRef Name="fieldStatusID" />
+      </Principal>
+      <Dependent Role="input">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_outSourcedPigID_fieldStates">
+    <End Type="myfarmModel.fieldState" Role="fieldState" Multiplicity="1" />
+    <End Type="myfarmModel.outSourcedPig" Role="outSourcedPig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fieldState">
+        <PropertyRef Name="fieldStatusID" />
+      </Principal>
+      <Dependent Role="outSourcedPig">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pigRelationships_fieldStates">
+    <End Type="myfarmModel.fieldState" Role="fieldState" Multiplicity="0..1" />
+    <End Type="myfarmModel.pigRelationship" Role="pigRelationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fieldState">
+        <PropertyRef Name="fieldStatusID" />
+      </Principal>
+      <Dependent Role="pigRelationship">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productTypes_fieldStates">
+    <End Type="myfarmModel.fieldState" Role="fieldState" Multiplicity="1" />
+    <End Type="myfarmModel.productType" Role="productType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fieldState">
+        <PropertyRef Name="fieldStatusID" />
+      </Principal>
+      <Dependent Role="productType">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sales_fieldStates">
+    <End Type="myfarmModel.fieldState" Role="fieldState" Multiplicity="1" />
+    <End Type="myfarmModel.sale" Role="sale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fieldState">
+        <PropertyRef Name="fieldStatusID" />
+      </Principal>
+      <Dependent Role="sale">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_suppliers_fieldStates">
+    <End Type="myfarmModel.fieldState" Role="fieldState" Multiplicity="1" />
+    <End Type="myfarmModel.supplier" Role="supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fieldState">
+        <PropertyRef Name="fieldStatusID" />
+      </Principal>
+      <Dependent Role="supplier">
+        <PropertyRef Name="supplierState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vaccinations_fieldStates">
+    <End Type="myfarmModel.fieldState" Role="fieldState" Multiplicity="1" />
+    <End Type="myfarmModel.vaccination" Role="vaccination" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fieldState">
+        <PropertyRef Name="fieldStatusID" />
+      </Principal>
+      <Dependent Role="vaccination">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inputs_pigs">
+    <End Type="myfarmModel.pig" Role="pig" Multiplicity="0..1" />
+    <End Type="myfarmModel.input" Role="input" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pig">
+        <PropertyRef Name="pigNumber" />
+      </Principal>
+      <Dependent Role="input">
+        <PropertyRef Name="pigID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inputs_productTypes">
+    <End Type="myfarmModel.productType" Role="productType" Multiplicity="1" />
+    <End Type="myfarmModel.input" Role="input" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productType">
+        <PropertyRef Name="productTypeID" />
+      </Principal>
+      <Dependent Role="input">
+        <PropertyRef Name="product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inputs_users">
+    <End Type="myfarmModel.user" Role="user" Multiplicity="1" />
+    <End Type="myfarmModel.input" Role="input" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="input">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_outSourcedPigID_pigs">
+    <End Type="myfarmModel.pig" Role="pig" Multiplicity="1" />
+    <End Type="myfarmModel.outSourcedPig" Role="outSourcedPig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pig">
+        <PropertyRef Name="pigNumber" />
+      </Principal>
+      <Dependent Role="outSourcedPig">
+        <PropertyRef Name="pigNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_outSourcedPigID_suppliers">
+    <End Type="myfarmModel.supplier" Role="supplier" Multiplicity="1" />
+    <End Type="myfarmModel.outSourcedPig" Role="outSourcedPig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supplier">
+        <PropertyRef Name="supplierID" />
+      </Principal>
+      <Dependent Role="outSourcedPig">
+        <PropertyRef Name="supplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pigRelationships_pigs">
+    <End Type="myfarmModel.pig" Role="pig" Multiplicity="0..1" />
+    <End Type="myfarmModel.pigRelationship" Role="pigRelationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pig">
+        <PropertyRef Name="pigNumber" />
+      </Principal>
+      <Dependent Role="pigRelationship">
+        <PropertyRef Name="femalePig" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pigRelationships_pigs1">
+    <End Type="myfarmModel.pig" Role="pig" Multiplicity="0..1" />
+    <End Type="myfarmModel.pigRelationship" Role="pigRelationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pig">
+        <PropertyRef Name="pigNumber" />
+      </Principal>
+      <Dependent Role="pigRelationship">
+        <PropertyRef Name="malePig" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pigRelationships_pigs2">
+    <End Type="myfarmModel.pig" Role="pig" Multiplicity="1" />
+    <End Type="myfarmModel.pigRelationship" Role="pigRelationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pig">
+        <PropertyRef Name="pigNumber" />
+      </Principal>
+      <Dependent Role="pigRelationship">
+        <PropertyRef Name="siblings" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pigs_pigSources">
+    <End Type="myfarmModel.pigSource" Role="pigSource" Multiplicity="1" />
+    <End Type="myfarmModel.pig" Role="pig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pigSource">
+        <PropertyRef Name="sourceID" />
+      </Principal>
+      <Dependent Role="pig">
+        <PropertyRef Name="source" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pigs_pigStates">
+    <End Type="myfarmModel.pigState" Role="pigState" Multiplicity="1" />
+    <End Type="myfarmModel.pig" Role="pig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pigState">
+        <PropertyRef Name="pigStateID" />
+      </Principal>
+      <Dependent Role="pig">
+        <PropertyRef Name="status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pigs_sexes">
+    <End Type="myfarmModel.sex" Role="sex" Multiplicity="1" />
+    <End Type="myfarmModel.pig" Role="pig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sex">
+        <PropertyRef Name="sexID" />
+      </Principal>
+      <Dependent Role="pig">
+        <PropertyRef Name="pigSex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sales_pigs">
+    <End Type="myfarmModel.pig" Role="pig" Multiplicity="1" />
+    <End Type="myfarmModel.sale" Role="sale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pig">
+        <PropertyRef Name="pigNumber" />
+      </Principal>
+      <Dependent Role="sale">
+        <PropertyRef Name="pigNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vaccinations_pigs">
+    <End Type="myfarmModel.pig" Role="pig" Multiplicity="1" />
+    <End Type="myfarmModel.vaccination" Role="vaccination" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pig">
+        <PropertyRef Name="pigNumber" />
+      </Principal>
+      <Dependent Role="vaccination">
+        <PropertyRef Name="pigNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sales_users">
+    <End Type="myfarmModel.user" Role="user" Multiplicity="1" />
+    <End Type="myfarmModel.sale" Role="sale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="sale">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_systemRoles">
+    <End Type="myfarmModel.systemRole" Role="systemRole" Multiplicity="1" />
+    <End Type="myfarmModel.user" Role="user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="systemRole">
+        <PropertyRef Name="systemRoleID" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vaccinations_vaccineTypes">
+    <End Type="myfarmModel.vaccineType" Role="vaccineType" Multiplicity="1" />
+    <End Type="myfarmModel.vaccination" Role="vaccination" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vaccineType">
+        <PropertyRef Name="vaccineTypeID" />
+      </Principal>
+      <Dependent Role="vaccination">
+        <PropertyRef Name="type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

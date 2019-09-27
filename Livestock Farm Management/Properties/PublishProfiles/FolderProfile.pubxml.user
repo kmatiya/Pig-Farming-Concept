@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_NewBackgroundProfile>True</_NewBackgroundProfile>
+    <_PublishTargetUrl>C:\Users\kmatiya\Desktop\pig managent</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>07/03/2018 08:27:00</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 08:43:40</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>07/03/2018 08:27:00</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>01/04/2017 00:44:16</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>01/04/2017 00:44:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>11/30/2016 16:07:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>12/07/2016 11:45:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>12/07/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>12/06/2016 15:15:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>12/07/2016 11:49:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>12/07/2016 11:50:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>12/06/2016 15:09:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>12/13/2016 03:10:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/05/2012 11:08:46</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/Open Chequelist Template.dll">
+      <publishTime>08/12/2018 10:42:07</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 15:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/10/2013 17:28:38</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>07/03/2018 08:26:33</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>07/03/2018 08:26:33</publishTime>
+    </File>
+    <File Include="Content/css/main.css">
+      <publishTime>07/03/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Content/font-awesome/css/font-awesome.css">
+      <publishTime>07/03/2018 08:55:51</publishTime>
+    </File>
+    <File Include="Content/font-awesome/css/font-awesome.min.css">
+      <publishTime>07/03/2018 08:55:51</publishTime>
+    </File>
+    <File Include="Content/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>07/03/2018 08:55:51</publishTime>
+    </File>
+    <File Include="Content/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>07/03/2018 08:55:51</publishTime>
+    </File>
+    <File Include="Content/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>07/03/2018 08:55:51</publishTime>
+    </File>
+    <File Include="Content/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>07/03/2018 08:55:51</publishTime>
+    </File>
+    <File Include="Content/font-awesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>07/03/2018 08:55:51</publishTime>
+    </File>
+    <File Include="Content/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>07/03/2018 08:55:51</publishTime>
+    </File>
+    <File Include="Content/font-awesome/HELP-US-OUT.txt">
+      <publishTime>07/03/2018 08:55:51</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>07/03/2018 08:26:19</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>07/03/2018 08:26:19</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/03/2018 08:26:33</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/03/2018 08:26:33</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>07/03/2018 08:26:33</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/03/2018 08:26:33</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/03/2018 08:26:19</publishTime>
+    </File>
+    <File Include="image/kondwani.jpg">
+      <publishTime>07/12/2018 16:44:43</publishTime>
+    </File>
+    <File Include="Models/Models.edmx.diagram">
+      <publishTime>07/29/2018 17:38:34</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/04/2018 12:01:19</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>07/03/2018 08:26:33</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>07/03/2018 08:26:33</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>07/03/2018 08:26:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>07/03/2018 08:26:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>07/03/2018 08:26:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>07/03/2018 08:26:47</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>07/03/2018 08:26:47</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>07/03/2018 08:26:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>07/03/2018 08:26:48</publishTime>
+    </File>
+    <File Include="Scripts/js/bootstrap.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/jquery-3.2.1.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/jquery-3.3.1.min.js">
+      <publishTime>07/14/2018 06:29:57</publishTime>
+    </File>
+    <File Include="Scripts/js/main.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/bootstrap-datepicker.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/bootstrap-notify.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/chart.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/dataTables.bootstrap.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/fullcalendar.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/jquery-ui.custom.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/jquery.dataTables.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/jquery.vmap.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/jquery.vmap.sampledata.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/jquery.vmap.world.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/moment.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/pace.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/select2.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/plugins/sweetalert.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/js/popper.min.js">
+      <publishTime>07/03/2018 08:42:19</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>07/03/2018 08:26:46</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>07/03/2018 08:26:47</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>07/03/2018 08:26:47</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/.github/ISSUE_TEMPLATE.md">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/.github/ISSUE_TEMPLATE/bug_report.md">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/.github/ISSUE_TEMPLATE/feature_request.md">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/.gitignore">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/blank-page.html">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/bootstrap-components.html">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/charts.html">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/css/main.css">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/form-components.html">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/form-custom.html">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/form-notifications.html">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/form-samples.html">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/index.html">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/bootstrap.min.js">
+      <publishTime>07/03/2018 08:39:08</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/jquery-3.2.1.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/main.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/bootstrap-datepicker.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/bootstrap-notify.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/chart.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/dataTables.bootstrap.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/fullcalendar.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/jquery-ui.custom.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/jquery.dataTables.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/jquery.vmap.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/jquery.vmap.sampledata.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/jquery.vmap.world.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/moment.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/pace.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/select2.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/plugins/sweetalert.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/js/popper.min.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/page-calendar.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/page-error.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/page-invoice.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/page-lockscreen.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/page-login.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/page-mailbox.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/page-user.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/table-basic.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/table-data-table.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/ui-cards.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/docs/widgets.html">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/Gruntfile.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/LICENSE">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/node-dev-server.js">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/package-lock.json">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/package.json">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/README.md">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/blank-page.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/bootstrap-components.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/charts.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/form-components.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/form-custom.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/form-notifications.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/form-samples.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/includes/_head.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/includes/_header.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/includes/_javascript.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/includes/_sidebar.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/index.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/layouts/_layout.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/page-calendar.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/page-error.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/page-invoice.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/page-lockscreen.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/page-login.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/page-mailbox.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/page-user.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/table-basic.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/table-data-table.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/ui-cards.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/pug/widgets.pug">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_alert.scss">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_background-variant.scss">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_badge.scss">
+      <publishTime>07/03/2018 08:39:09</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_border-radius.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_box-shadow.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_breakpoints.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_buttons.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_caret.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_clearfix.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_float.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_forms.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_gradients.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_grid-framework.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_grid.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_hover.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_image.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_list-group.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_lists.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_nav-divider.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_pagination.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_reset-text.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_resize.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_screen-reader.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_size.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_table-row.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_text-emphasis.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_text-hide.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_text-truncate.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_transition.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/mixins/_visibility.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_align.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_background.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_borders.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_clearfix.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_display.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_embed.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_flex.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_float.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_position.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_screenreaders.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_shadows.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_sizing.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_spacing.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_text.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/utilities/_visibility.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_alert.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_badge.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_bootstrap-grid.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_bootstrap-reboot.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_bootstrap.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_breadcrumb.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_button-group.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_buttons.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_card.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_carousel.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_close.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_code.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_custom-forms.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_dropdown.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_forms.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_functions.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_grid.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_images.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_input-group.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_jumbotron.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_list-group.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_media.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_mixins.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_modal.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_nav.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_navbar.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_pagination.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_popover.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_print.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_progress.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_reboot.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_root.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_tables.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_tooltip.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_transitions.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_type.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_utilities.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/bootstrap-source/_variables.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_bootstrap-datepicker.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_customize-bootstrap.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_dataTables.bootstrap.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_fonts.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_fullcalendar.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_jqvmap.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_notify.sass">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_pace.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_select2.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_sweetalert.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/1-tools/_vars.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/2-basics/_app.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/2-basics/_helpers.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_app-title.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_button-spinner.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_button.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_chat.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_custom-radio-n-checkbox.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_dropdown.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_header.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_material-half-bg.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_material-loader.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_rtl.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_sidebar-mini.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_sidebar.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_tile.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_toggle-button.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/3-component/_widgets.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/4-pages/_error-page.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/4-pages/_lockscreen-material.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/4-pages/_login-material.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/4-pages/_mailbox.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/4-pages/_user-profile.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="vali-admin-master/vali-admin-master/src/sass/main.scss">
+      <publishTime>07/03/2018 08:39:10</publishTime>
+    </File>
+    <File Include="Views/Common/AddASale.cshtml">
+      <publishTime>08/06/2018 00:41:57</publishTime>
+    </File>
+    <File Include="Views/Common/AddAUser.cshtml">
+      <publishTime>08/06/2018 00:41:01</publishTime>
+    </File>
+    <File Include="Views/Common/AddExpense.cshtml">
+      <publishTime>08/06/2018 00:40:22</publishTime>
+    </File>
+    <File Include="Views/Common/AddPigs.cshtml">
+      <publishTime>08/06/2018 00:45:10</publishTime>
+    </File>
+    <File Include="Views/Common/AddSupplier.cshtml">
+      <publishTime>08/06/2018 00:53:28</publishTime>
+    </File>
+    <File Include="Views/Common/AllPigs.cshtml">
+      <publishTime>08/06/2018 00:49:55</publishTime>
+    </File>
+    <File Include="Views/Common/AllSales.cshtml">
+      <publishTime>08/06/2018 00:29:22</publishTime>
+    </File>
+    <File Include="Views/Common/AllUsers.cshtml">
+      <publishTime>08/06/2018 00:50:06</publishTime>
+    </File>
+    <File Include="Views/Common/EditSupplier.cshtml">
+      <publishTime>07/29/2018 10:23:05</publishTime>
+    </File>
+    <File Include="Views/Common/Expenses.cshtml">
+      <publishTime>08/06/2018 00:50:17</publishTime>
+    </File>
+    <File Include="Views/Common/FamilyTree.cshtml">
+      <publishTime>07/29/2018 16:58:14</publishTime>
+    </File>
+    <File Include="Views/Common/Index.cshtml">
+      <publishTime>07/12/2018 16:09:51</publishTime>
+    </File>
+    <File Include="Views/Common/SupplierDetails.cshtml">
+      <publishTime>07/29/2018 10:53:13</publishTime>
+    </File>
+    <File Include="Views/Common/Suppliers.cshtml">
+      <publishTime>08/06/2018 00:49:38</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>07/03/2018 08:26:19</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>07/14/2018 06:32:30</publishTime>
+    </File>
+    <File Include="Views/Shared/_leftSideMenu.cshtml">
+      <publishTime>07/12/2018 18:44:57</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>07/03/2018 08:26:19</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>07/03/2018 08:26:19</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/12/2018 10:42:11</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

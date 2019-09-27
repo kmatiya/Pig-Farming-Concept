@@ -1,0 +1,50 @@
+﻿@model Open_Chequelist_Template.Models.supplier
+
+@{
+    ViewBag.Title = "SupplierDetails";
+}
+
+<h2>SupplierDetails</h2>
+
+<div>
+    <h4>supplier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.supplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.supplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.supplierPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.supplierPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.supplierEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.supplierEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fieldState.state)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fieldState.state)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.supplierID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Open_Chequelist_Template.Models.sale>
+
+@{
+    ViewBag.Title = "AllSales";
+}
+<div class="app-title">
+    <h2>AllSales</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "AddASale")
+    </p>
+</div>
+    <div class="row">
+        <div class="col-md-12" id="dataintable">
+            <div class="tile">
+                <div class="tile-body">
+                    <p class="text-danger"></p>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered" id="sampleTable">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.price)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.salesDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.fieldState.state)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.pig.tagNumber)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.user.username)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.price)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.salesDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.fieldState.state)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.pig.tagNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.user.username)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.salesID }) |
+                                            @Html.ActionLink("Details", "Details", new { id = item.salesID }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.salesID })
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/js/plugins/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/js/plugins/dataTables.bootstrap.min.js"></script>
+    <script>$('#sampleTable').DataTable();</script>
